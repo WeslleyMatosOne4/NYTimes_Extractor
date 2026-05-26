@@ -13,14 +13,13 @@ class Extractor:
         self.search_phrase = config["search_phrase"]
         self.categories = config["categories"]
         self.months = config["months"]
-        self.environment = config["environment"] == "PRD"
         self.page = self._init_page()
     
     def _init_page(self):
         self.p = sync_playwright().start()
 
         self.browser = self.p.chromium.launch(
-            headless= self.environment,
+            headless= False,
             args=[
                 "--no-sandbox",
                 "--disable-dev-shm-usage",

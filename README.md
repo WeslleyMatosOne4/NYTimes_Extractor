@@ -1,10 +1,14 @@
-# Projeto de Automação em Python
 
-Este projeto de automação Python seguindo boas práticas, incluindo estrutura modular, logging, configuração externa e organização de código.
+# Desafio Técnico
 
-# Estrutura e organização do projeto
+## Objetivo
+Automatizar o processo de extração de dados do site de notícias NY Times.
 
-nytimes_scraper/
+
+## Estrutura e organização do projeto
+
+```Bash
+NYTimes_Extractor/
 ├── config.yaml
 ├── docker-compose.yaml
 ├── Dockerfile
@@ -23,12 +27,41 @@ nytimes_scraper/
 │   └── utils.py
 ├── logs
 └── output
+```
 
-# Bibliotecas utilizadas 
 
-playwright
-openpyxl
-requests
-pyyaml
-Pillow
-pyyaml# NYTimes_Extractor
+## Instalação
+
+Necessário python 3.12 para executar o processo.
+Instale as dependencias usando:
+
+```ssh
+pip install -r requirements
+```
+
+Em seguida execute o processo com:
+```ssh
+python main.py
+```
+## Config
+
+É possivel alterar os parametros da pesquisa no arquivo 'config.yaml':
+
+- `search_phrase`: frase que será utilizada na pesquisa;
+- `categories`: categorias relacionadas a pesquisa;
+- `months`: periodo de busca das nóticias.
+
+
+## Deployment
+
+Este bot pode ser instalado em um container Docker utilizando o docker-compose.yml, utilizando o commando:
+
+```bash
+  docker-compose up --build
+```
+
+
+## Autor
+
+- [@WeslleyPinheiro](https://github.com/WeslleyMatosOne4)
+
