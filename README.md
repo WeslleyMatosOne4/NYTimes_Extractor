@@ -23,7 +23,7 @@ NYTimes_Extractor/
 ├── utils/
 │   ├── __init__.py
 │   ├── excel.py
-│   ├── scraper.py
+│   ├── extractor.py
 │   └── utils.py
 ├── logs
 └── output
