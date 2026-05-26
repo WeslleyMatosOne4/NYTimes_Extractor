@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    container_name: nytimes_extractor
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DISPLAY=:99
+    volumes:
+      - ./logs:/app/logs
+      - ./output:/app/output
+      - ./config.yaml:/app/config.yaml
+    shm_size: "2gb"
+    restart: "no"
